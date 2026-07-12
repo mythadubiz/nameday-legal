@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NameDay — Privacy Policy</title>
+    <style>
+        :root {
+            --ink: #3a2338;
+            --muted: #7a6472;
+            --bg: #fbf6ee;
+            --card: #fffdf9;
+            --line: #f0e2d4;
+            --plum: #6b2f57;
+            --plum-soft: #9a4d78;
+            --peach: #f0a878;
+            --peach-soft: #f6c9a6;
+            --gold: #c69a2e;
+            --gold-soft: #e0b451;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg); color: var(--ink); line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .header {
+            background: linear-gradient(135deg, #52254a 0%, #a34a6d 42%, #e6a35f 78%, #e0b451 100%);
+            padding: 64px 20px 56px; text-align: center; color: #fff;
+        }
+        .header img {
+            width: 108px; height: 108px; border-radius: 24px; margin-bottom: 18px;
+            box-shadow: 0 14px 38px rgba(58,20,52,0.42);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .header h1 { font-size: 2.1em; font-weight: 800; letter-spacing: -0.5px; }
+        .header .tag { font-size: 1.02em; opacity: 0.95; margin-top: 8px; }
+        .header .sub { font-size: 0.9em; opacity: 0.9; margin-top: 14px; font-weight: 600;
+            background: rgba(255,255,255,0.18); display: inline-block; padding: 5px 14px; border-radius: 999px; }
+        .container { max-width: 720px; margin: 0 auto; padding: 8px 18px 40px; }
+        .card {
+            background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+            padding: 24px 26px; margin: 18px 0;
+            box-shadow: 0 3px 16px rgba(90,45,70,0.06);
+        }
+        .card h2 { font-size: 1.22em; color: var(--plum); margin-bottom: 10px; display: flex; align-items: baseline; gap: 8px; }
+        .card h2 .dot { width: 9px; height: 9px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--peach), var(--gold)); display: inline-block; }
+        .card p, .card li { font-size: 0.99em; color: var(--ink); }
+        .card p + p { margin-top: 10px; }
+        .card ul { margin: 8px 0 4px 22px; }
+        .card li { margin: 6px 0; }
+        strong { color: var(--plum); }
+        a { color: var(--plum-soft); font-weight: 600; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .lead { font-size: 1.05em; color: var(--muted); }
+        .btn {
+            display: inline-block; margin-top: 14px; padding: 13px 24px;
+            background: linear-gradient(135deg, var(--plum), var(--gold)); color: #fff;
+            border-radius: 12px; text-decoration: none; font-weight: 700;
+            box-shadow: 0 8px 22px rgba(107,47,87,0.28);
+        }
+        .btn:hover { text-decoration: none; opacity: 0.94; }
+        .note {
+            background: #f7eee2; border-left: 4px solid var(--peach);
+            padding: 14px 18px; border-radius: 0 12px 12px 0; margin-top: 14px;
+            font-size: 0.95em; color: var(--muted);
+        }
+        .footer { text-align: center; padding: 36px 20px 56px; color: var(--muted); font-size: 0.82em; }
+        @media (max-width: 480px) {
+            .header { padding: 52px 18px 44px; }
+            .header h1 { font-size: 1.8em; }
+            .card { padding: 20px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="icon.png" alt="NameDay app icon">
+        <h1>NameDay</h1>
+        <p class="tag">Baby-name finder &amp; baby-prediction game</p>
+        <div class="sub">Privacy Policy · Last updated: 12 July 2026</div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2><span class="dot"></span>Overview</h2>
+            <p class="lead">NameDay helps expecting parents find the perfect name together and invites family and friends to guess the big day — all while keeping your family's moments private.</p>
+            <p>NameDay is designed to be private by default. The app has <strong>no accounts to create</strong>, <strong>no advertising</strong>, and <strong>no third-party analytics or tracking</strong> of any kind. The names you browse and shortlist stay on your device. The prediction game is shared only through <strong>your own iCloud</strong>, with the people you personally invite — never through any server of ours.</p>
+        </div>
+
+        <div class="card">
+            <h2><span class="dot"></span>Information We Collect</h2>
+            <p><strong>None, directly.</strong> We (the developer) do not operate a server, do not have user accounts, and do not collect, receive, sell, or share your personal information.</p>
+            <p>Everything you do in NameDay lives in one of two places:</p>
+            <ul>
+                <li><strong>On your device</strong> — the names you browse, your couple's shortlist, your parent labels, and any prediction challenges or guesses you create locally are stored on your device using Apple's on-device database (SwiftData).</li>
+                <li><strong>In iCloud / CloudKit</strong> — when you host or join a <em>shared</em> prediction challenge, that challenge and its predictions are stored in Apple's iCloud and shared with the participants you invite (see the next section).</li>
+            </ul>
+            <p>In both cases, this content is yours. It is not transmitted to us.</p>
+        </div>
+
+        <div class="card">
+            <h2><span class="dot"></span>How the Prediction Game Uses iCloud / CloudKit</h2>
+            <p>The baby-prediction game can be played entirely on one device (passing the phone around), or shared with family and friends. When you choose to <strong>share</strong> a challenge, NameDay uses Apple's <strong>iCloud / CloudKit</strong> — specifically Apple's private sharing feature (<strong>CKShare</strong>) — to sync the challenge between participants.</p>
+            <p>What this means in practice:</p>
+            <ul>
+                <li>The <strong>host</strong> creates a challenge and invites people with a share link. The challenge lives in the host's private iCloud and is shared only with the invited participants.</li>
+                <li>Each <strong>guest's name and their guesses</strong> (for example, predicted gender, due date, weight, or first letter of the name) are shared with the other participants of that same challenge, so everyone can see the leaderboard once the host reveals the real answers.</li>
+                <li>Guests join using their <strong>own existing iCloud account</strong> — there is no separate NameDay account, sign-up, or password.</li>
+                <li>This data is <strong>hosted by Apple</strong> in the participants' iCloud accounts and is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>. <strong>We do not run any server, and we have no access to this data</strong> beyond what CloudKit provides to app participants.</li>
+            </ul>
+            <p>Only share a challenge with people you trust, since anyone you invite can see the shared challenge and the participants' guesses.</p>
+        </div>
+
+        <div class="card">
+            <h2><span class="dot"></span>Purchases</h2>
+            <p>NameDay offers an optional one-time in-app purchase (no subscription) that unlocks premium features such as an unlimited shortlist, filtering names by culture, and hosting shared prediction challenges. Joining a challenge as a guest is always free.</p>
+            <p>All purchases are processed <strong>directly by Apple</strong> through the App Store using StoreKit. We never see, receive, or store your payment details, card number, or Apple ID. Apple handles the transaction, receipts, and restores under <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's own Privacy Policy</a>.</p>
+        </div>
+
+        <div class="card">
+            <h2><span class="dot"></span>Data Storage &amp; Deletion</h2>
+            <p>Your local content — browsed names, shortlist, parent labels, and locally-created challenges — is stored <strong>on your device</strong> (SwiftData). If your device backs up to iCloud, that on-device data may be included in your own private device backup, governed by Apple's privacy policy.</p>
+            <p>Shared prediction challenges live in the <strong>participants' iCloud accounts</strong> (CloudKit), as described above.</p>
+            <p>You are in control of your data:</p>
+            <ul>
+                <li><strong>Deleting the app</strong> removes all of its locally stored data from your device.</li>
+                <li><strong>Deleting a challenge</strong> you host removes it from sharing; guests can leave a challenge they joined.</li>
+                <li>iCloud data can also be managed from the iOS <strong>Settings → iCloud</strong> options on your device.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><span class="dot"></span>Third Parties</h2>
+            <p><strong>None.</strong> NameDay contains no advertising SDKs, no analytics services, and no third-party tracking libraries. The only external service involved is <strong>Apple</strong> itself — for in-app purchases (StoreKit) and for iCloud / CloudKit sharing of prediction challenges.</p>
+        </div>
+
+        <div class="card">
+            <h2><span class="dot"></span>Children's Privacy</h2>
+            <p>NameDay is intended for expecting parents and adults. It does not collect personal information, contains no ads and no third-party content, and does not knowingly gather any data from children under 13.</p>
+        </div>
+
+        <div class="card">
+            <h2><span class="dot"></span>Contact</h2>
+            <p>Questions or a privacy request? We're happy to help.</p>
+            <p><strong>Email:</strong> <a href="mailto:mythadubiz@gmail.com">mythadubiz@gmail.com</a></p>
+            <a class="btn" href="mailto:mythadubiz@gmail.com?subject=NameDay%20Privacy">Contact Us</a>
+            <div class="note">We may update this policy as the app evolves. Any material change will be reflected here with a new date.</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2026 Mythadubiz · NameDay
+    </div>
+</body>
+</html>
