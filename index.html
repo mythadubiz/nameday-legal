@@ -79,66 +79,74 @@
         <img src="icon.png" alt="NameDay app icon">
         <h1>NameDay</h1>
         <p class="tag">Baby-name finder &amp; baby-prediction game</p>
-        <div class="sub">Privacy Policy · Last updated: 12 July 2026</div>
+        <div class="sub">Privacy Policy · Last updated: 2 October 2026</div>
     </div>
 
     <div class="container">
         <div class="card">
             <h2><span class="dot"></span>Overview</h2>
             <p class="lead">NameDay helps expecting parents find the perfect name together and invites family and friends to guess the big day — all while keeping your family's moments private.</p>
-            <p>NameDay is designed to be private by default. The app has <strong>no accounts to create</strong>, <strong>no advertising</strong>, and <strong>no third-party analytics or tracking</strong> of any kind. The names you browse and shortlist stay on your device. The prediction game is shared only through <strong>your own iCloud</strong>, with the people you personally invite — never through any server of ours.</p>
+            <p>NameDay has <strong>no accounts to create</strong> and <strong>no advertising</strong>, and it does not track you. The names you browse and shortlist stay on your device. A shared prediction challenge is stored with Apple's iCloud / CloudKit and is visible only to the people the host lets in. Anonymous usage statistics are <strong>off unless you switch them on</strong> (see <a href="#analytics">Anonymous Usage Statistics</a>).</p>
         </div>
 
         <div class="card">
             <h2><span class="dot"></span>Information We Collect</h2>
-            <p><strong>None, directly.</strong> We (the developer) do not operate a server, do not have user accounts, and do not collect, receive, sell, or share your personal information.</p>
-            <p>Everything you do in NameDay lives in one of two places:</p>
+            <p>We (the developer) do not operate a server of our own, do not have user accounts, and do not sell or share your personal information. What you do in NameDay lives in one of these places:</p>
             <ul>
-                <li><strong>On your device</strong> — the names you browse, your couple's shortlist, your parent labels, and any prediction challenges or guesses you create locally are stored on your device using Apple's on-device database (SwiftData).</li>
-                <li><strong>In iCloud / CloudKit</strong> — when you host or join a <em>shared</em> prediction challenge, that challenge and its predictions are stored in Apple's iCloud and shared with the participants you invite (see the next section).</li>
+                <li><strong>On your device</strong> — the names you browse, your couple's shortlist, your parent labels, your album photos, your profile photo, and challenges played only on one device are stored on your device (SwiftData).</li>
+                <li><strong>In NameDay's iCloud / CloudKit database</strong> — when you host or join a <em>shared</em> prediction challenge, the challenge, the participants' first names, their guesses and the challenge chat messages are stored in NameDay's CloudKit database, hosted by Apple (see the next section).</li>
+                <li><strong>Anonymous usage statistics</strong> — only if you opt in (see below).</li>
             </ul>
-            <p>In both cases, this content is yours. It is not transmitted to us.</p>
         </div>
 
         <div class="card">
-            <h2><span class="dot"></span>How the Prediction Game Uses iCloud / CloudKit</h2>
-            <p>The baby-prediction game can be played entirely on one device (passing the phone around), or shared with family and friends. When you choose to <strong>share</strong> a challenge, NameDay uses Apple's <strong>iCloud / CloudKit</strong> — specifically Apple's private sharing feature (<strong>CKShare</strong>) — to sync the challenge between participants.</p>
-            <p>What this means in practice:</p>
+            <h2><span class="dot"></span>How Shared Challenges Use iCloud / CloudKit</h2>
+            <p>The baby-prediction game can be played entirely on one device (passing the phone around), or shared with family and friends. To share it, NameDay uses Apple's <strong>iCloud / CloudKit</strong>, in the app's <strong>public CloudKit database</strong>.</p>
             <ul>
-                <li>The <strong>host</strong> creates a challenge and invites people with a share link. The challenge lives in the host's private iCloud and is shared only with the invited participants.</li>
-                <li>Each <strong>guest's name and their guesses</strong> (for example, predicted gender, due date, weight, or first letter of the name) are shared with the other participants of that same challenge, so everyone can see the leaderboard once the host reveals the real answers.</li>
-                <li>Guests join using their <strong>own existing iCloud account</strong> — there is no separate NameDay account, sign-up, or password.</li>
-                <li>This data is <strong>hosted by Apple</strong> in the participants' iCloud accounts and is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>. <strong>We do not run any server, and we have no access to this data</strong> beyond what CloudKit provides to app participants.</li>
+                <li>The <strong>host</strong> publishes a challenge and gets a short <strong>invite code</strong>. A challenge can only be found with its exact code — there is no list or search of challenges.</li>
+                <li>A guest who enters the code sends a <strong>join request</strong> with their first name. The host <strong>approves or declines</strong> each request. Only the host and approved guests can make predictions and chat; the app only displays what they wrote.</li>
+                <li>What is shared with the challenge's members: the challenge (title, due date, chosen categories, revealed answers), each member's <strong>first name</strong>, their <strong>guesses</strong> and the <strong>chat messages</strong>. Your shortlist, photos and profile photo are never uploaded.</li>
+                <li>You join with your <strong>own iCloud account</strong>; there is no NameDay account or password. NameDay never sees your Apple ID, e-mail address or iCloud identity: participants are identified by a random code generated on your device.</li>
+                <li>This data is <strong>hosted by Apple</strong> under <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>. Because it sits in the app's own database, the developer can technically access it through Apple's CloudKit tools; we do so only to answer a support, safety or deletion request.</li>
             </ul>
-            <p>Only share a challenge with people you trust, since anyone you invite can see the shared challenge and the participants' guesses.</p>
+            <p>Share your invite code only with people you trust: anyone who has it can ask to join, and the host decides who gets in.</p>
+        </div>
+
+        <div class="card" id="analytics">
+            <h2><span class="dot"></span>Anonymous Usage Statistics (optional)</h2>
+            <p>After the welcome tour, NameDay asks whether you would like to help improve the app with anonymous usage statistics. <strong>Nothing is sent unless you accept</strong>, and you can change your mind any time in <strong>Settings → Anonymous statistics</strong>.</p>
+            <ul>
+                <li><strong>What is measured</strong>: which screens are opened, which features are used (for example adding a name to the shortlist, creating or joining a challenge), whether the premium screen was shown, and whether a purchase succeeded — plus basic technical data such as app version, device model, OS version, language and country.</li>
+                <li><strong>What is never sent</strong>: the names you browse or shortlist, your guesses, chat messages, photos, your name, or anything that identifies you. No advertising identifier (IDFA) is used and the app never asks for tracking permission, because it does not track you: it does not link this data with data from other companies' apps or websites for advertising, and does not share it with data brokers. The app ships without the advertising-identifier components of the analytics SDK.</li>
+                <li><strong>How long it is kept</strong>: event-level statistics are retained by Google Firebase for at most <strong>14 months</strong>; only aggregated, non-identifying reports are kept beyond that. Switching the setting off stops all sending immediately.</li>
+                <li><strong>Provider</strong>: <strong>Google Firebase Analytics</strong>, on Google's servers, under <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google's privacy terms</a>. The data is used only for aggregated statistics about NameDay and is not shared with advertisers.</li>
+            </ul>
         </div>
 
         <div class="card">
             <h2><span class="dot"></span>Purchases</h2>
-            <p>NameDay offers an optional one-time in-app purchase (no subscription) that unlocks premium features such as an unlimited shortlist, filtering names by culture, and hosting shared prediction challenges. Joining a challenge as a guest is always free.</p>
-            <p>All purchases are processed <strong>directly by Apple</strong> through the App Store using StoreKit. We never see, receive, or store your payment details, card number, or Apple ID. Apple handles the transaction, receipts, and restores under <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's own Privacy Policy</a>.</p>
+            <p>NameDay offers an optional one-time in-app purchase (no subscription) that unlocks the full name catalogue, rich name stories, advanced filters and hosting shared prediction challenges. Joining a challenge as a guest is always free.</p>
+            <p>All purchases are processed <strong>directly by Apple</strong> through the App Store using StoreKit. We never see, receive, or store your payment details, card number, or Apple ID.</p>
         </div>
 
         <div class="card">
             <h2><span class="dot"></span>Data Storage &amp; Deletion</h2>
-            <p>Your local content — browsed names, shortlist, parent labels, and locally-created challenges — is stored <strong>on your device</strong> (SwiftData). If your device backs up to iCloud, that on-device data may be included in your own private device backup, governed by Apple's privacy policy.</p>
-            <p>Shared prediction challenges live in the <strong>participants' iCloud accounts</strong> (CloudKit), as described above.</p>
-            <p>You are in control of your data:</p>
             <ul>
                 <li><strong>Deleting the app</strong> removes all of its locally stored data from your device.</li>
-                <li><strong>Deleting a challenge</strong> you host removes it from sharing; guests can leave a challenge they joined.</li>
-                <li>iCloud data can also be managed from the iOS <strong>Settings → iCloud</strong> options on your device.</li>
+                <li>When the host <strong>deletes a shared challenge</strong>, it is removed from the CloudKit database and no one can open it any more.</li>
+                <li>To have your <strong>guesses or chat messages</strong> in a shared challenge erased, write to us (address below) with the challenge's invite code; we will delete them.</li>
+                <li>Anonymous statistics: switch them off in Settings at any time.</li>
             </ul>
         </div>
 
         <div class="card">
             <h2><span class="dot"></span>Third Parties</h2>
-            <p><strong>None.</strong> NameDay contains no advertising SDKs, no analytics services, and no third-party tracking libraries. The only external service involved is <strong>Apple</strong> itself — for in-app purchases (StoreKit) and for iCloud / CloudKit sharing of prediction challenges.</p>
+            <p>NameDay contains no advertising SDKs and no cross-app tracking libraries. The external parties involved are <strong>Apple</strong> — in-app purchases (StoreKit) and iCloud / CloudKit for shared challenges — and <strong>Google Firebase</strong>, <strong>only if you opted in</strong> to anonymous usage statistics.</p>
         </div>
 
         <div class="card">
             <h2><span class="dot"></span>Children's Privacy</h2>
-            <p>NameDay is intended for expecting parents and adults. It does not collect personal information, contains no ads and no third-party content, and does not knowingly gather any data from children under 13.</p>
+            <p>NameDay is intended for expecting parents and adults. It contains no ads and does not knowingly gather any data from children under 13.</p>
         </div>
 
         <div class="card">
